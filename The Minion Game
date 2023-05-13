@@ -10,9 +10,7 @@ def minion_game(string):
     t=0
     for i in string:
         m=m+1
-        t=0
-        for j in range(m,l):
-            t=t+1
+        t=l-m
         #print(i,t)
         if(i.lower() in vowel):
             k=k+1+t
