@@ -1,0 +1,33 @@
+# Solution to https://www.hackerrank.com/challenges/the-minion-game/problem?isFullScreen=true
+
+def minion_game(string):
+    # your code goes here
+    vowel=['a','e','i','o','u']
+    l=len(string)
+    s=0
+    k=0
+    m=0
+    t=0
+    for i in string:
+        m=m+1
+        t=0
+        for j in range(m,l):
+            t=t+1
+        print(i,t)
+        if(i.lower() in vowel):
+            k=k+1+t
+        else:
+            s=s+1+t    
+    if (k>s):
+        print('Kevin',k)
+    elif k<s:
+        print('Stuart',s)
+    else:
+        print('Draw')    
+        
+        
+    
+
+if __name__ == '__main__':
+  s = input()
+  minion_game(s)
