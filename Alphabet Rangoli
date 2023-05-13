@@ -1,0 +1,28 @@
+#solution to https://www.hackerrank.com/challenges/alphabet-rangoli/problem?isFullScreen=true
+def print_rangoli(size):
+    # your code goes here
+    alph='abcdefghijklmnopqrstuvwxyz'
+    width=(size-1)*4+1
+    for i in range(size*2-1):
+        l=''
+        if i >= size:
+            m=size*2-i-2
+        else:
+            m=i
+        k=size-m-1
+        #print(i,m,)
+        for j in range(m+1): 
+            l=l+alph[size-1-j]
+            if j!=m:
+                l=l+'-'
+        for j in range(m,0,-1): 
+            l=l+'-'+alph[size-j]
+           
+            #print(i,m,j,l)
+                   
+        print(l.center(width,'-'))
+
+if __name__ == '__main__':
+    n = int(input())
+    print_rangoli(n)
+    
