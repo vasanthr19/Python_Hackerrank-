@@ -1,0 +1,38 @@
+#soution to https://www.hackerrank.com/challenges/capitalize/problem?isFullScreen=true
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the solve function below.
+def solve(s):
+    l=[]
+    l=s.split()
+    m=0
+    w=''
+    for i in s:
+        if m!=0:
+            if s[m-1]==' ':
+                w=w+i.capitalize()
+            else:
+                w=w+i
+        else:
+            w=w+i.capitalize()
+        m=m+1
+    
+    print(w)    
+    return w
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = solve(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
