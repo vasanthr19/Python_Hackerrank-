@@ -1,0 +1,22 @@
+#solution to https://www.hackerrank.com/challenges/merge-the-tools/problem?isFullScreen=true
+def merge_the_tools(string, k):
+    # your code goes here
+    cntr=0
+    #arrv=0
+    mas=[]
+    temp=''
+    for i in string:
+        if i not in temp:
+            temp=temp+i
+        cntr=cntr+1
+        if cntr==k:            
+            print(temp)
+            #arrv=arrv+1
+            temp=''
+            cntr=0
+    #print(mas)
+    
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
