@@ -1,0 +1,31 @@
+#Solution to https://www.hackerrank.com/challenges/collections-counter/problem?isFullScreen=true
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import Counter
+x=int(input())
+li=[]
+li=input().split()
+for i in range(x):
+    li[i]=int(li[i])
+n=int(input())
+ss=[]
+x=[]
+m=Counter(li)
+tot=0
+#print(type(m))
+for i in range(n):
+    ssv,xv=input().split()
+    ss.append(int(ssv))
+    x.append(int(xv))
+    if (m[int(ssv)]>0):
+        tot=tot+x[i]
+        li.remove(ss[i])
+        m=Counter(li)
+#print(Counter(li))
+#print(ss)
+#print(x)
+print(tot)
+
+    
+
+    
+ 
