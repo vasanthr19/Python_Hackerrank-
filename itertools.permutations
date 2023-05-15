@@ -1,0 +1,14 @@
+#Solution to https://www.hackerrank.com/challenges/itertools-permutations/problem?isFullScreen=true
+from itertools import permutations
+s,k=input().split()
+n=int(k)
+lst = [s[i] for i in range(0,len(s))]
+lst.sort()
+s=''
+for i in lst:
+    #print(i, end = "")
+    s=s+i
+lt=list(permutations(s,n))
+#print(lt[0])
+for perm in list(lt):
+         print (''.join(perm))
